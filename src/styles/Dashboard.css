@@ -1,0 +1,200 @@
+/* Global Reset and Background Fix */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url('https://c.tenor.com/sr8g_XsZYDEAAAAC/raining-sparkle.gif') no-repeat center center fixed;
+  background-size: cover;
+ /* You can replace this with an image if desired */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Main Container Styling */
+.container {
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+  padding: 20px 15px;
+  max-width: 80%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Headings */
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+}
+
+/* Form Elements */
+input, select, button {
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 8px 2px #28a745;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.6);
+}
+
+button:hover, button:focus {
+  background-color: #218838;
+  box-shadow: 0 6px 18px rgba(33, 136, 56, 0.8);
+  outline: none;
+}
+
+/* Forecast Card */
+.card {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 25px 20px;
+  margin: 20px auto;
+  border-radius: 16px;
+  max-width: 500px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* Level Indicators */
+.level-low {
+  color: #007bff;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px #004a99;
+}
+
+.level-moderate {
+  color: #ffc107;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px #b38600;
+}
+
+.level-high {
+  color: #dc3545;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px #990000;
+}
+
+/* Error Message */
+.error {
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: center;
+  text-shadow: 1px 1px 2px #660000;
+  font-size: 1.1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px 10px;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .card {
+    margin: 15px 10px;
+    padding: 20px 15px;
+    max-width: 100%;
+  }
+
+  input, select, button {
+    font-size: 0.95rem;
+    padding: 10px 14px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  input, select, button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Header Animation */
+.header-with-gif {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.water-drop-gif {
+  width: 50px;
+  height: 50px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Wave GIF Animation */
+.wave-gif-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.water-wave-gif {
+  width: 100%;
+  max-width: 400px;
+  opacity: 0.5;
+  animation: slowWave 10s linear infinite;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes slowWave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}

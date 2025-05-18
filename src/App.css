@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+  background: url('https://cdn.pixabay.com/photo/2022/06/14/17/54/irrigation-7262563_1280.jpg'); /* Light background for dashboard */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+/* You can keep this for any links in your app */
+.App-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.App-link:hover {
+  text-decoration: underline;
+}
+
+/* Error message style */
+.error {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
